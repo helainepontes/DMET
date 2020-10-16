@@ -44,13 +44,8 @@ class DepartmentArtsViewController: UIViewController {
         view.addSubview(collection)
         
         collection.translatesAutoresizingMaskIntoConstraints = false
-        collection.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         
-        collection.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        
-        collection.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        
-        collection.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        NSLayoutConstraint.activateConstraints([collection.topAnchor.constraint(equalTo: view.topAnchor), collection.leadingAnchor.constraint(equalTo: view.leadingAnchor),collection.trailingAnchor.constraint(equalTo: view.trailingAnchor), collection.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
         
     }
     
